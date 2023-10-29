@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #0c192c;
+
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: beige;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s/var(--i));
+}
+
+
+    .bubbles span:nth-child(even)
+    {
+        background: #ff2d75;
+        box-shadow: 0 0 0 10px #ff2d7544,
+        0 0 50px #ff2d75,
+        0 0 100px #ff2d75;
+    }
+
+    @keyframes animate {
+        0%
+        {
+             transform: translateY(100vh) scale(0);
+        }
+        
+        100% 
+        {
+            transform: translateY(-10vh) scale(1);
+        }
+    }
+
+    h1{
+        text-align: center;
+        font-weight: lighter;
+        margin-bottom: 25px;
+        font-size: 50px;
+    }
+
+    p{
+        text-align: center;
+    }
+    img{
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+ 
+    .top{
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+    .middle{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        height: 100vh;
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        color: beige;
+        font-size: 25px;
+    }
